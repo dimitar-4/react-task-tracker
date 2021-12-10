@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask"; 
+import { useState } from "react/cjs/react.development";
 
 const initialTasks = [
   {
@@ -26,6 +27,7 @@ const initialTasks = [
 
 function App() {
   const[tasks, setTasks] = React.useState(initialTasks);
+  const [showAdd, setShowAdd] = useState(false);
 
   function toggleReminder(id) {
     const newTasks = tasks.map((task) => (
@@ -51,8 +53,8 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
-      <AddTask onSubmit={addTask} />
+      <Header onAdd={() => setShowAdd(!showAdd)} showAdd={showAdd} />
+      {showAdd && <AddTask onSubmit={addTask} />}
       <Tasks onToggle={toggleReminder} onDelete={deleteTask} tasks={tasks} />
     </div>
   );
