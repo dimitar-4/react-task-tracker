@@ -53,7 +53,7 @@ function AddTask({ onSubmit }) {
                     name="reminder" 
                     id="reminder" 
                     checked={reminder} 
-                    onChange={(e) => setReminder(e.target.value)}/>
+                    onChange={(e) => setReminder(e.target.checked)}/>
             </div>
             <div>
                 <Button block color="#000" type="submit">
