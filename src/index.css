@@ -72,6 +72,16 @@ code {
   border-left: 5px solid green;
 }
 
+.delete-icon {
+  color: red;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  border: 1px solid red;
+  border-radius: 3px;
+}
+
 .task h3 {
   display: flex;
   align-items: center;
