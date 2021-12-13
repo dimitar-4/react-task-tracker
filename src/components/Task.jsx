@@ -9,8 +9,9 @@ function Task({ task, onToggle, onDelete }) {
             <h3>
                 {task.text}
                 <FaTimes 
+                    className="delete-icon"
                     onClick={() => onDelete(task.id)} 
-                    style={{ color: "red", cursor: "pointer" }}
+                    // style={{ color: "red", cursor: "pointer" }}
                 />
             </h3>
             <p>{task.day}</p>
