@@ -72,9 +72,14 @@ code {
   border-left: 5px solid green;
 }
 
+.task-icons {
+  font-size: 24px;
+}
+
 .edit-icon {
   color: blue;
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .delete-icon {

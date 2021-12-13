@@ -8,7 +8,7 @@ function Task({ task, onToggle, onDelete, onEdit }) {
         <div onDoubleClick={() => onToggle(task.id)} className={containerClasses}>
             <h3>
                 {task.text}
-                <span>
+                <span className="task-icons">
                     <FaEdit onClick={() => onEdit(task.id)}
                         className="edit-icon"
                         // style={{ marginRight: 4, color: "blue" }}
